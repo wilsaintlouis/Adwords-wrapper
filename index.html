@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdWords Wrapper</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div class="header">
+    <h1>AdWords Wrapper</h1>
+    <div class="social-icons">
+      <span>LIKE 80</span>
+      <span>TWEET</span>
+      <span>SHARE</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="input-section">
+      <label for="inputKeywords">Enter keywords:</label>
+      <textarea id="inputKeywords" placeholder="Enter one keyword per line"></textarea>
+      <div class="options">
+        <label><input type="checkbox" id="toLowercase"> Change to lowercase</label>
+        <label><input type="checkbox" id="removeUrls"> Remove URLs</label>
+        <div>Lines: <span id="inputLines">0</span></div>
+        <button onclick="wrapKeywords()">Wrap keywords</button>
+      </div>
+    </div>
+
+    <div class="output-box">
+      <h3>Broad, +Modified +Broad, "Phrase" & [Exact] Match</h3>
+      <pre id="output1"></pre>
+      <div class="output-footer">
+        <div>Lines: <span id="outputLines1">0</span></div>
+        <button class="copy-btn" onclick="copyToClipboard('output1')">Copy</button>
+      </div>
+    </div>
+
+    <div class="output-box">
+      <h3>+Modified +Broad, "Phrase" & [Exact] Match</h3>
+      <pre id="output2"></pre>
+      <div class="output-footer">
+        <div>Lines: <span id="outputLines2">0</span></div>
+        <button class="copy-btn" onclick="copyToClipboard('output2')">Copy</button>
+      </div>
+    </div>
+
+    <div class="output-box">
+      <h3>Broad, "Phrase" & [Exact] Match</h3>
+      <pre id="output3"></pre>
+      <div class="output-footer">
+        <div>Lines: <span id="outputLines3">0</span></div>
+        <button class="copy-btn" onclick="copyToClipboard('output3')">Copy</button>
+      </div>
+    </div>
+
+    <div class="output-box">
+      <h3>"Phrase" & [Exact] Match</h3>
+      <pre id="output4"></pre>
+      <div class="output-footer">
+        <div>Lines: <span id="outputLines4">0</span></div>
+        <button class="copy-btn" onclick="copyToClipboard('output4')">Copy</button>
+      </div>
+    </div>
+
+    <div class="output-box">
+      <h3>+Modified +Broad Match</h3>
+      <pre id="output5"></pre>
+      <div class="output-footer">
+        <div>Lines: <span id="outputLines5">0</span></div>
+        <button class="copy-btn" onclick="copyToClipboard('output5')">Copy</button>
+      </div>
+    </div>
+
+    <div class="output-box">
+      <h3>"Phrase Match"</h3>
+      <pre id="output6"></pre>
+      <div class="output-footer">
+        <div>Lines: <span id="outputLines6">0</span></div>
+        <button class="copy-btn" onclick="copyToClipboard('output6')">Copy</button>
+      </div>
+    </div>
+  </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
